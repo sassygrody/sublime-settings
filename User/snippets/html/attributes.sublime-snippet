@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+\${1: id="\$2"}\${3: class="\$4"}
+]]></content>
+    <tabTrigger>attr</tabTrigger>
+    <description>Template Snippet</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+this.\$el.
+]]></content>
+    <tabTrigger>el</tabTrigger>
+    <scope>source.js</scope>
+    <description>Backbone this.$el</description>
+</snippet>

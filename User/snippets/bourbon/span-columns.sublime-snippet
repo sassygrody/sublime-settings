@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@include span-columns(${1:12});
+]]></content>
+    <tabTrigger>sc</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Bourbon span-columns mixin</description>
+</snippet>

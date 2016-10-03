@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<select name="$1"${2: id="${3:$1-field}"}${4: class="$5"}>
+  ${0:<option>Choose an option</option>}
+</select>
+]]></content>
+    <tabTrigger>select</tabTrigger>
+    <scope>text.html, text.haml</scope>
+    <description>HTML select tag</description>
+</snippet>

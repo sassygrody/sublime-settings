@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+@include media(\$tablet, \$desktop) {
+  $0
+}
+]]></content>
+  <tabTrigger>desktop</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>

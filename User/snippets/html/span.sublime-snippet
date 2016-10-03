@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+<span${1: id="$2"}${3: class="$4"}></span>
+]]></content>
+    <tabTrigger>span</tabTrigger>
+    <scope>text.html</scope>
+    <description>span</description>
+</snippet>

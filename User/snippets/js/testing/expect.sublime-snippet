@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+expect(${1:subject.$2}).to$0
+]]></content>
+    <tabTrigger>expect</tabTrigger>
+    <scope>source.js</scope>
+    <description>Jasmine expect</description>
+</snippet>

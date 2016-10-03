@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@extend $1;
+]]></content>
+    <tabTrigger>ex</tabTrigger>
+    <scope>source.scss</scope>
+    <description>SCSS @extend directive</description>
+</snippet>

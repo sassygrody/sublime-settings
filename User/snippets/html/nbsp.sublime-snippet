@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+&nbsp;
+]]></content>
+    <tabTrigger>sp</tabTrigger>
+    <scope>text.html,text.haml</scope>
+    <description>Non-breaking space</description>
+</snippet>

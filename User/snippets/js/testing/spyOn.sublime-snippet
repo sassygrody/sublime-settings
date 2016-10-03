@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+spyOn(${1:subject}$2, "$3");
+]]></content>
+    <tabTrigger>spy</tabTrigger>
+    <scope>source.js</scope>
+    <description>Jasmine spyOn</description>
+</snippet>

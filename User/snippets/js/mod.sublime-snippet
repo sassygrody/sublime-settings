@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+App.Models.$0
+]]></content>
+    <tabTrigger>mod</tabTrigger>
+    <scope>source.js</scope>
+    <description>Backbone model</description>
+</snippet>

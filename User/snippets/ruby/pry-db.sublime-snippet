@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+require "pry";binding.pry
+]]></content>
+    <tabTrigger>db</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Insert pry breakpoint</description>
+</snippet>

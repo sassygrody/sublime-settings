@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@import "$0";
+]]></content>
+    <tabTrigger>im</tabTrigger>
+    <scope>source.scss</scope>
+    <description>SCSS import</description>
+</snippet>

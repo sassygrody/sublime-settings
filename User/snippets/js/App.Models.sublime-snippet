@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+App.Models.$1
+]]></content>
+  <tabTrigger>am</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

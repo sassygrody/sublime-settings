@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+:${1:$SELECTION}
+]]></content>
+    <tabTrigger>shift+:</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Symbolize selection</description>
+</snippet>

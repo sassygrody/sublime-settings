@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+background do
+  $0
+end
+]]></content>
+    <tabTrigger>background</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Capybara background</description>
+</snippet>

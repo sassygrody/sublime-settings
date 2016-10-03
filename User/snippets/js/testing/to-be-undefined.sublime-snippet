@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+to.be.undefined;
+]]></content>
+    <tabTrigger>tou</tabTrigger>
+    <scope>source.js</scope>
+    <description>to.be.undefined</description>
+</snippet>

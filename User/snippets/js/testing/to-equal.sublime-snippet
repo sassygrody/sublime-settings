@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+to.equal(${1:"$0"});
+]]></content>
+    <tabTrigger>toe</tabTrigger>
+    <scope>source.js</scope>
+    <description>to.equal()</description>
+</snippet>

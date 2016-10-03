@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@include omega;
+]]></content>
+    <tabTrigger>om</tabTrigger>
+    <scope>source.scss</scope>
+    <description>omega neat</description>
+</snippet>

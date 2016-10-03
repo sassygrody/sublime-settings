@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+scenario "$1" do
+  $0
+end
+]]></content>
+    <tabTrigger>scenario</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Capybara scenario</description>
+</snippet>

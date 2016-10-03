@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+require "${1:rails}_helper"
+
+describe $2${3:, type: :$4} do
+  $0
+end
+]]></content>
+    <tabTrigger>suite</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rspec suite</description>
+</snippet>

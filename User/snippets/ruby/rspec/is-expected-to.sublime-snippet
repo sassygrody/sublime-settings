@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+it { is_expected.to $0 }
+]]></content>
+    <tabTrigger>ie</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>is_expected.to</description>
+</snippet>

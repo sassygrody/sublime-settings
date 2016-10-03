@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+screenshot_and_open_image
+]]></content>
+    <tabTrigger>screenshot</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rspec capybara screenshot</description>
+</snippet>

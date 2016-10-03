@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<div${1: id="$2"}${3: class="$4"}>
+  $0
+</div>
+]]></content>
+    <tabTrigger>div</tabTrigger>
+    <scope>text.html</scope>
+    <description>Template Snippet</description>
+</snippet>

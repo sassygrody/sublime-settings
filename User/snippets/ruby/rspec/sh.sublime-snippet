@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+require "spec_helper"
+]]></content>
+    <tabTrigger>sh</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Require spec_helper.rb</description>
+</snippet>

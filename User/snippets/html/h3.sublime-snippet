@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+<h3${1: id="$2"}${3: class="$4"}>$0</h3>
+]]></content>
+    <tabTrigger>h3</tabTrigger>
+    <scope>text.html</scope>
+    <description>h3</description>
+</snippet>

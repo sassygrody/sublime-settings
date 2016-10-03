@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+|$SELECTION|
+]]></content>
+    <scope>source.ruby</scope>
+    <description>pipe quotes</description>
+</snippet>

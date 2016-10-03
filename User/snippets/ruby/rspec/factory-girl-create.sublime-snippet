@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+FactoryGirl.create(:${1}${2:, $3})
+]]></content>
+  <tabTrigger>fgc</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

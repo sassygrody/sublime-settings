@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+FactoryGirl.
+]]></content>
+    <tabTrigger>fg</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>FactoryGirl</description>
+</snippet>

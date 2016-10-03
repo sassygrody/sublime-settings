@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+subject
+]]></content>
+  <tabTrigger>s</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+gulp.src(${1:["$2"]})
+  .pipe(gulp.dest("${0:dist}"));
+]]></content>
+    <tabTrigger>gs</tabTrigger>
+    <scope>source.js</scope>
+    <description>gulp-src</description>
+</snippet>

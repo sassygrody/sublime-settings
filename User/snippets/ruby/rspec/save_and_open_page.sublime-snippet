@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+save_and_open_page
+]]></content>
+    <tabTrigger>save</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>save_and_open_page capybara method</description>
+</snippet>

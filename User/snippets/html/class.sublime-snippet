@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+class="$0"
+]]></content>
+    <tabTrigger>c</tabTrigger>
+    <scope>text.html</scope>
+    <description>HTML class attribute</description>
+</snippet>

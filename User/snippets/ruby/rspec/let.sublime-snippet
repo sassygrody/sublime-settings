@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+let(:$1) { create(:$1) }
+]]></content>
+    <tabTrigger>let</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Ruby let statement</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+$0
+]]></content>
+  <tabTrigger>vertical</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>

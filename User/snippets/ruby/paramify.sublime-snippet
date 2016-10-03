@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+params[:${SELECTION/"|'|^://g}]
+]]></content>
+    <scope>source.ruby</scope>
+    <description>Wrap in params</description>
+</snippet>

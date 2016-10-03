@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+ap $0, plain: true
+]]></content>
+    <tabTrigger>ap</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Awesome Print</description>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+\$.ajax({
+  url: '$1',
+  type: 'get',
+  dataType: 'json',
+  data: {},
+  success: function() {
+
+  },
+  error: function() {
+
+  }
+});
+]]></content>
+    <tabTrigger>ajax</tabTrigger>
+    <scope>source.js</scope>
+    <description>jQuery ajax</description>
+</snippet>

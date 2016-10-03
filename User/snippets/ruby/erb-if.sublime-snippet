@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+<% if ${1:"$2"} %>
+  $0
+<% end %>
+]]></content>
+    <tabTrigger>if</tabTrigger>
+    <scope>text.html.ruby</scope>
+</snippet>

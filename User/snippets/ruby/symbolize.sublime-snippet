@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[
+:${SELECTION/"|'|^://g}
+]]></content>
+    <description>Turn selection into symbol</description>
+</snippet>

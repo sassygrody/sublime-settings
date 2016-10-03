@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+${SELECTION/^:|\s?=>//g}:
+]]></content>
+    <tabTrigger>hash-convert</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Convert old-school hashes</description>
+</snippet>

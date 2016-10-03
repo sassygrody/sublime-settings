@@ -1,0 +1,78 @@
+{
+	"added_words":
+	[
+		"https",
+		"rubygems",
+		"org",
+		"jquery",
+		"turbolinks",
+		"uglifier",
+		"jbuilder",
+		"sdoc",
+		"byebug",
+		"tzinfo",
+		"rubocop",
+		"rspec",
+		"nav",
+		"capybara",
+		"fuubar",
+		"shoulda",
+		"webdriver"
+	],
+	"always_show_minimap_viewport": false,
+	"auto_complete_delay": 0,
+	"bold_folder_labels": false,
+	"close_windows_when_empty": true,
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"copy_with_empty_selection": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		".gitkeep",
+		".keep",
+		"*.log*",
+		"npm-shrinkwrap.json"
+	],
+	"folder_exclude_patterns":
+	[
+		"log",
+		"tmp",
+		"public/uploads",
+		".sass-cache",
+		".git",
+		"coverage",
+		".bundle",
+		"node_modules",
+		"org_builder/build",
+		"whym/app/assets/javascripts/build",
+		"portal-too/app/assets/javascripts/build"
+	],
+	"font_face": "Monaco",
+	"font_options":
+	[
+	],
+	"font_size": 16.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"margin": 2,
+	"overlay_scroll_bars": "enabled",
+	"remember_open_files": false,
+	"rulers":
+	[
+	],
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"tab_size": 2,
+	"theme": "Soda Dark 3.sublime-theme",
+	"trailing_spaces_include_current_line": false,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?",
+	"word_wrap": false
+}

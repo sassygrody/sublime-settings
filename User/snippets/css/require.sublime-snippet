@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+//=require ${1:"$0"}
+]]></content>
+    <tabTrigger>req</tabTrigger>
+    <scope>source.css</scope>
+    <description>Sprockets require</description>
+</snippet>

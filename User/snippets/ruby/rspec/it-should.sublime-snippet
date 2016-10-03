@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+it { should ${1:validate_presence_of :$2} }
+]]></content>
+    <tabTrigger>its</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>should matcher</description>
+</snippet>

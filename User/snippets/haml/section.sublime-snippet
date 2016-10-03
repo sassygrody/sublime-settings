@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+%section
+]]></content>
+    <tabTrigger>section</tabTrigger>
+    <scope>text.haml</scope>
+    <description>Haml %section</description>
+</snippet>

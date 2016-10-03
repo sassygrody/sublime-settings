@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+it { is_expected.to $0 }
+]]></content>
+    <tabTrigger>ite</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Rspec shoulda expectation</description>
+</snippet>

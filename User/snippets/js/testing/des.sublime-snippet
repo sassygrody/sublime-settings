@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+describe("$1", function() {
+  $0
+});
+]]></content>
+    <tabTrigger>des</tabTrigger>
+    <scope>source.js</scope>
+    <description>Jasmine describe</description>
+</snippet>
