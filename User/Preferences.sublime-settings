@@ -26,6 +26,7 @@
 	"color_inactive_tabs": true,
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"copy_with_empty_selection": false,
+	"detect_slow_plugins": true,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -44,10 +45,13 @@
 		".git",
 		"coverage",
 		".bundle",
-		"node_modules",
 		"org_builder/build",
+		"node_modules",
 		"whym/app/assets/javascripts/build",
-		"portal-too/app/assets/javascripts/build"
+		"portal-too/app/assets/javascripts/build",
+		"nex-app-parse/build",
+		"nex-app-parse/logs",
+		".idea"
 	],
 	"font_face": "Monaco",
 	"font_options":
@@ -57,6 +61,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"ColorPicker",
 		"Vintage"
 	],
 	"margin": 2,
