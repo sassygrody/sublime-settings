@@ -133,5 +133,29 @@
         ["run_macro_file", {"file": "res://Packages/Default/Add Line.sublime-macro"}]
       ]
     }
-  }
+  },
+  // Add closing paren at end of line `⌃;`
+  {
+    "keys": ["ctrl+0"],
+    "command": "chain",
+    "args": {
+      "commands": [
+        ["move_to", { "to": "eol" }],
+        ["insert_snippet", {"contents": ")"}]
+      ]
+    }
+  },
+  // Insert opening paren
+  {
+    "keys": ["ctrl+9"],
+    "command": "chain",
+    "args": {
+      "commands": [
+        // ["move_to", { "to": "eol" }],
+        ["insert_snippet", {"contents": "("}]
+      ]
+    }
+  },
+  { "keys": ["ctrl+shift+["], "command": "fold" },
+  { "keys": ["ctrl+shift+]"], "command": "unfold" }
 ]

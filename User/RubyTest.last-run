@@ -1,4 +1,4 @@
 {
-	"last_test_run": "bundle exec rspec --no-color --format progress spec/features/members_pages_spec.rb:7",
+	"last_test_run": "bundle exec rspec --no-color --format progress spec/controllers/events_controller_spec.rb:106",
 	"last_test_working_dir": "/Users/sasha/sasha/coop"
 }
