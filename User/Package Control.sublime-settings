@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"ApplySyntax",
@@ -15,7 +16,6 @@
 		"BracketHighlighter",
 		"ChangeQuotes",
 		"Clipboard Manager",
-		"ColorPicker",
 		"Cucumber",
 		"CycleGroup",
 		"EJS",
@@ -25,6 +25,7 @@
 		"ES6-Toolkit",
 		"ESLint",
 		"Fix Mac Path",
+		"Flow",
 		"GitGutter",
 		"GitHubinator",
 		"Google Spell Check",
@@ -38,7 +39,6 @@
 		"MarkdownLivePreview",
 		"Maybs Quit",
 		"nginx",
-		"Open URL",
 		"Package Control",
 		"paredit",
 		"PlainTasks",
@@ -50,7 +50,6 @@
 		"SCSS",
 		"SCSS Snippets",
 		"SideBarEnhancements",
-		"Six - Future JavaScript Syntax",
 		"StandardFormat",
 		"Stylus",
 		"SublimeLinter",
@@ -62,8 +61,6 @@
 		"SublimeLinter-rubocop",
 		"SublimeLinter-xmllint",
 		"Theme - Soda",
-		"Theme - Spacegray",
-		"ThemeTweaker",
 		"xml2json"
 	]
 }

@@ -7,5 +7,6 @@
   "ruby_use_scratch" : false,
   "save_on_run": true,
   "hide_panel": false,
-  "before_callback": "echo $PATH"
+  "before_callback": "echo $PATH",
+  "show_errors_inline": false
 }
