@@ -1,7 +1,5 @@
 <snippet>
   <content><![CDATA[
-const query = null$0
-
 fetch('/graphql', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },

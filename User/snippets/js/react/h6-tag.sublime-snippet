@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-<p>$0</p>
+<h6>$0</h6>
 ]]></content>
-  <tabTrigger>p</tabTrigger>
+  <tabTrigger>h6</tabTrigger>
   <scope>source.js</scope>
 </snippet>

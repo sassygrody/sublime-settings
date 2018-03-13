@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-App.Models.$1
+<h5>$0</h5>
 ]]></content>
-  <tabTrigger>am</tabTrigger>
+  <tabTrigger>h5</tabTrigger>
   <scope>source.js</scope>
 </snippet>

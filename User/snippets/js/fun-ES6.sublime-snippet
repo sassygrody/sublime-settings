@@ -1,6 +1,8 @@
 <snippet>
-  <content><![CDATA[${0:($1) => ${3:{${2:$TM_SELECTED_TEXT}\}}}]]></content>
-  <tabTrigger>f</tabTrigger>
-  <scope>source.js</scope>
-  <description>Anonymous Arrow Function</description>
+    <content><![CDATA[
+($1) => {$0}
+]]></content>
+    <tabTrigger>fn</tabTrigger>
+    <scope>source.js</scope>
+    <description>JavaScript anon arrow function</description>
 </snippet>
