@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+<form${1: onSubmit={$2}}>
+  $0
+</form>
+]]></content>
+  <tabTrigger>form</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

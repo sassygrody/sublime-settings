@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+<button className='${1:button}'>$0</button>
+]]></content>
+  <tabTrigger>button</tabTrigger>
+  <scope>source.js</scope>
+</snippet>
