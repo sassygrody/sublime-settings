@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-beforeEach(function() {
+beforeEach(() => {
   $0
-});
+})
 ]]></content>
     <tabTrigger>bef</tabTrigger>
     <scope>source.js</scope>

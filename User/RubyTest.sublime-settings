@@ -1,12 +1,9 @@
 {
   "check_for_rbenv": true,
-  // "run_rspec_command": "bundle exec rspec --no-color --format p --format UnicornFormatter {relative_path}",
   "run_rspec_command": "bundle exec rspec --no-color --format progress {relative_path}",
-  // "run_single_rspec_command": "bundle exec rspec --no-color --format p  --format UnicornFormatter {relative_path} -l{line_number}",
   "run_single_rspec_command": "bundle exec rspec --no-color --format progress {relative_path}:{line_number}",
   "ruby_use_scratch" : false,
   "save_on_run": true,
   "hide_panel": false,
-  "before_callback": "echo $PATH",
-  "show_errors_inline": false
+  "show_errors_inline" : false
 }

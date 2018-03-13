@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+const query = null$0
+
+fetch('/graphql', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    $1
+  })
+}).then(response => {
+  // get the response back and return it as json
+  console.log(response)
+  return response.json()
+}).then(response => {
+  // set the response somewhere accessibile to the component
+  console.log(response.data)
+  this.setState({$2})
+})
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>fetch</tabTrigger> -->
+  <tabTrigger>demo-fetch</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

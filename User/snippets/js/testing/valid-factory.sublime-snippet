@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+it "has a valid factory" do
+  subject.valid?
+  expect(subject.errors.messages).to eq({})
+end
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>valid_factory</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.ruby</scope>
+</snippet>

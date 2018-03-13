@@ -1,7 +1,7 @@
 [
   { "keys": ["super+v"], "command": "paste_and_indent" },
   { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar" },
-  { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar" },
+  // { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar" },
   { "keys": ["super+\\"], "command": "toggle_side_bar" },
 
   // * Forward by words `ctrl+f`
@@ -9,13 +9,6 @@
     "keys": ["alt+f"],
     "command": "move",
     "args": { "by": "wordends", "forward": true }
-  },
-
-  // * Forward by words `shift+alt+f`
-  {
-    "keys": ["shift+alt+f"],
-    "command": "move",
-    "args": { "by": "wordends", "forward": true, "extend": true }
   },
 
    // Clipboard Manager package
@@ -27,10 +20,17 @@
   { "keys": ["super+alt+ctrl+v"], "command": "clipboard_manager_choose_and_paste" },
   { "keys": ["super+n"], "command": "advanced_new_file_new" },
   { "keys": ["alt+super+,"], "command": "open_file", "args": { "file": "${packages}/User/Default (OSX).sublime-keymap" } },
+
+  // File rename
   {
     "keys": ["super+alt+ctrl+shift+r"],
     "command": "side_bar_rename"
   },
+  {
+    "keys": ["ctrl+shift+r"],
+    "command": "side_bar_rename"
+  },
+
   // Run Single Test `⇧⌘R`
   {
     "keys": ["super+r"], "command": "run_single_ruby_test",
@@ -73,89 +73,49 @@
     "keys": ["shift+super+t"],
     "command": "reopen_last_file"
   },
-  // Add comma at end of line `⌃,`
-  {
-    "keys": ["ctrl+,"],
-    "command": "chain",
+  // Manually created macro in,
+  { "keys": ["ctrl+,"],
+    "command": "run_macro_file",
     "args": {
-      "commands": [
-        ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": ","}]
-      ]
+      "file": "Packages/User/comma_to_eol.sublime-macro"
     }
   },
-
-  // Add comma at end of line, insert new line `⇧⌃,`
-  {
-    "keys": ["shift+ctrl+,"],
-    "command": "chain",
-    "args": {
-      "commands": [
-        ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": ","}],
-        ["run_macro_file", {"file": "res://Packages/Default/Add Line.sublime-macro"}]
-      ]
-    }
-  },
-
   // Add semicolon at end of line `⌃;`
-  {
-    "keys": ["ctrl+;"],
-    "command": "chain",
+  { "keys": ["ctrl+;"],
+    "command": "run_macro_file",
     "args": {
-      "commands": [
-        ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": ";"}]
-      ]
-    }
-  },
-
-  // // Add semicolon at end of line `⌃;`
-  // {
-  //   "keys": ["ctrl+l"],
-  //   "command": "chain",
-  //   "args": {
-  //     "commands": [
-  //       ["move_to", { "to": "eol" }],
-  //       ["insert_snippet", {"contents": ";"}]
-  //     ]
-  //   }
-  // },
-
-  // Add semicolon at end of line, insert new line `⇧⌃;`
-  {
-    "keys": ["shift+ctrl+;"],
-    "command": "chain",
-    "args": {
-      "commands": [
-        ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": ";"}],
-        ["run_macro_file", {"file": "res://Packages/Default/Add Line.sublime-macro"}]
-      ]
+      "file": "Packages/User/semicolon_to_eol.sublime-macro"
     }
   },
   // Add closing paren at end of line `⌃;`
   {
     "keys": ["ctrl+0"],
-    "command": "chain",
+    "command": "run_macro_file",
     "args": {
-      "commands": [
-        ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": ")"}]
-      ]
+      "file": "Packages/User/paren_to_eol.sublime-macro"
     }
   },
   // Insert opening paren
   {
     "keys": ["ctrl+9"],
-    "command": "chain",
-    "args": {
-      "commands": [
-        // ["move_to", { "to": "eol" }],
-        ["insert_snippet", {"contents": "("}]
-      ]
-    }
+    "command": "insert",
+    "args": {"characters": "("}
   },
   { "keys": ["ctrl+shift+["], "command": "fold" },
-  { "keys": ["ctrl+shift+]"], "command": "unfold" }
+  { "keys": ["ctrl+shift+]"], "command": "unfold" },
+  // go to definition
+  { "keys": ["super+g"], "command": "goto_definition" },
+  ///
+  { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+  { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+  {"keys": ["tab"], "command": "expand_abbreviation_by_tab", "context":
+    [
+      { "operand": "source.js", "operator": "equal", "match_all": true, "key": "selector" },
+      { "match_all": true, "key": "selection_empty" },
+      { "operator": "equal", "operand": false, "match_all": true, "key": "has_next_field" },
+      { "operand": false, "operator": "equal", "match_all": true, "key": "auto_complete_visible" },
+      { "match_all": true, "key": "is_abbreviation" }
+    ]
+  },
+  { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 ]

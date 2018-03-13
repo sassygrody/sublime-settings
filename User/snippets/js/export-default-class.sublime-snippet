@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-export default class ${1} extends React.Component {
+export default class ${1} extends Component {
   render () {
     return (
       ${2}

@@ -1,4 +1,4 @@
-"""Unicode Properties (autogen)."""
+"""Unicode Properties from Unicode version 6.1.0 (autogen)."""
 from __future__ import unicode_literals
 
 unicode_decomposition_type = {
@@ -38,4 +38,42 @@ unicode_decomposition_type = {
     "super": "\u00aa\u00b2-\u00b3\u00b9-\u00ba\u02b0-\u02b8\u02e0-\u02e4\u10fc\u1d2c-\u1d2e\u1d30-\u1d3a\u1d3c-\u1d4d\u1d4f-\u1d61\u1d78\u1d9b-\u1dbf\u2070-\u2071\u2074-\u207f\u2120\u2122\u2c7d\u2d6f\u3192-\u319f\ua770\ua7f8-\ua7f9\U0001f16a-\U0001f16b",
     "vertical": "\u309f\u30ff\ufe10-\ufe19\ufe30-\ufe44\ufe47-\ufe48",
     "wide": "\u3000\uff01-\uff60\uffe0-\uffe6"
+}
+ascii_decomposition_type = {
+    "^canonical": "\x00-\xbf\xc6\xd0\xd7-\xd8\xde-\xdf\xe6\xf0\xf7-\xf8\xfe",
+    "^circle": "\x00-\xff",
+    "^compat": "\x00-\xa7\xa9-\xae\xb0-\xb3\xb6-\xb7\xb9-\xff",
+    "^final": "\x00-\xff",
+    "^font": "\x00-\xff",
+    "^fraction": "\x00-\xbb\xbf-\xff",
+    "^initial": "\x00-\xff",
+    "^isolated": "\x00-\xff",
+    "^medial": "\x00-\xff",
+    "^narrow": "\x00-\xff",
+    "^nobreak": "\x00-\x9f\xa1-\xff",
+    "^none": "\xa0\xa8\xaa\xaf\xb2-\xb5\xb8-\xba\xbc-\xbe\xc0-\xc5\xc7-\xcf\xd1-\xd6\xd9-\xdd\xe0-\xe5\xe7-\xef\xf1-\xf6\xf9-\xfd\xff",
+    "^small": "\x00-\xff",
+    "^square": "\x00-\xff",
+    "^sub": "\x00-\xff",
+    "^super": "\x00-\xa9\xab-\xb1\xb4-\xb8\xbb-\xff",
+    "^vertical": "\x00-\xff",
+    "^wide": "\x00-\xff",
+    "canonical": "\xc0-\xc5\xc7-\xcf\xd1-\xd6\xd9-\xdd\xe0-\xe5\xe7-\xef\xf1-\xf6\xf9-\xfd\xff",
+    "circle": "",
+    "compat": "\xa8\xaf\xb4-\xb5\xb8",
+    "final": "",
+    "font": "",
+    "fraction": "\xbc-\xbe",
+    "initial": "",
+    "isolated": "",
+    "medial": "",
+    "narrow": "",
+    "nobreak": "\xa0",
+    "none": "\x00-\x9f\xa1-\xa7\xa9\xab-\xae\xb0-\xb1\xb6-\xb7\xbb\xbf\xc6\xd0\xd7-\xd8\xde-\xdf\xe6\xf0\xf7-\xf8\xfe",
+    "small": "",
+    "square": "",
+    "sub": "",
+    "super": "\xaa\xb2-\xb3\xb9-\xba",
+    "vertical": "",
+    "wide": ""
 }

@@ -1,9 +1,9 @@
 {
 	"extensions":
 	[
-		"sh",
-		"zsh",
+		".functions",
 		"bash",
-		".functions"
+		"zsh",
+		"sh"
 	]
 }

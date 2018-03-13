@@ -1,4 +1,4 @@
 {
-	"last_test_run": "bundle exec rspec --no-color --format progress spec/features/products_page_spec.rb:24",
-	"last_test_working_dir": "/Users/sasha/sasha/coop"
+	"last_test_run": "bundle exec rspec --no-color --format progress spec/models/facility_spec.rb",
+	"last_test_working_dir": "/Users/sasha/devmynd/dds/mirs-backend-yavin"
 }

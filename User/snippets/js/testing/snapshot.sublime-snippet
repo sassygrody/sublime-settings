@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+/* eslint-env jest */
+import * as React from 'react'
+import { shallow } from 'enzyme'
+import ${0} from '../${0}'
+
+let subject
+
+describe('#render', () => {
+  it('renders properly', () => {
+    subject = shallow(<${0} />)
+
+    expect(subject).toMatchSnapshot()
+  })
+})
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>snapshot</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

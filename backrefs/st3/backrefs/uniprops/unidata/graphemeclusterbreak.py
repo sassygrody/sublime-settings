@@ -1,4 +1,4 @@
-"""Unicode Properties (autogen)."""
+"""Unicode Properties from Unicode version 6.1.0 (autogen)."""
 from __future__ import unicode_literals
 
 unicode_grapheme_cluster_break = {
@@ -24,4 +24,28 @@ unicode_grapheme_cluster_break = {
     "spacingmark": "\u0903\u093b\u093e-\u0940\u0949-\u094c\u094e-\u094f\u0982-\u0983\u09bf-\u09c0\u09c7-\u09c8\u09cb-\u09cc\u0a03\u0a3e-\u0a40\u0a83\u0abe-\u0ac0\u0ac9\u0acb-\u0acc\u0b02-\u0b03\u0b40\u0b47-\u0b48\u0b4b-\u0b4c\u0bbf\u0bc1-\u0bc2\u0bc6-\u0bc8\u0bca-\u0bcc\u0c01-\u0c03\u0c41-\u0c44\u0c82-\u0c83\u0cbe\u0cc0-\u0cc1\u0cc3-\u0cc4\u0cc7-\u0cc8\u0cca-\u0ccb\u0d02-\u0d03\u0d3f-\u0d40\u0d46-\u0d48\u0d4a-\u0d4c\u0d82-\u0d83\u0dd0-\u0dd1\u0dd8-\u0dde\u0df2-\u0df3\u0e33\u0eb3\u0f3e-\u0f3f\u0f7f\u1031\u103b-\u103c\u1056-\u1057\u1084\u17b6\u17be-\u17c5\u17c7-\u17c8\u1923-\u1926\u1929-\u192b\u1930-\u1931\u1933-\u1938\u19b5-\u19b7\u19ba\u1a19-\u1a1b\u1a55\u1a57\u1a6d-\u1a72\u1b04\u1b35\u1b3b\u1b3d-\u1b41\u1b43-\u1b44\u1b82\u1ba1\u1ba6-\u1ba7\u1baa\u1bac-\u1bad\u1be7\u1bea-\u1bec\u1bee\u1bf2-\u1bf3\u1c24-\u1c2b\u1c34-\u1c35\u1ce1\u1cf2-\u1cf3\ua823-\ua824\ua827\ua880-\ua881\ua8b4-\ua8c3\ua952-\ua953\ua983\ua9b4-\ua9b5\ua9ba-\ua9bb\ua9bd-\ua9c0\uaa2f-\uaa30\uaa33-\uaa34\uaa4d\uaaeb\uaaee-\uaaef\uaaf5\uabe3-\uabe4\uabe6-\uabe7\uabe9-\uabea\uabec\U00011000\U00011002\U00011082\U000110b0-\U000110b2\U000110b7-\U000110b8\U0001112c\U00011182\U000111b3-\U000111b5\U000111bf-\U000111c0\U000116ac\U000116ae-\U000116af\U000116b6\U00016f51-\U00016f7e\U0001d166\U0001d16d",
     "t": "\u11a8-\u11ff\ud7cb-\ud7fb",
     "v": "\u1160-\u11a7\ud7b0-\ud7c6"
+}
+ascii_grapheme_cluster_break = {
+    "^control": "\x0a\x0d\x20-\x7e\xa0-\xac\xae-\xff",
+    "^cr": "\x00-\x0c\x0e-\xff",
+    "^extend": "\x00-\xff",
+    "^l": "\x00-\xff",
+    "^lf": "\x00-\x09\x0b-\xff",
+    "^lv": "\x00-\xff",
+    "^lvt": "\x00-\xff",
+    "^other": "\x00-\x1f\x7f-\x9f\xad",
+    "^spacingmark": "\x00-\xff",
+    "^t": "\x00-\xff",
+    "^v": "\x00-\xff",
+    "control": "\x00-\x09\x0b-\x0c\x0e-\x1f\x7f-\x9f\xad",
+    "cr": "\x0d",
+    "extend": "",
+    "l": "",
+    "lf": "\x0a",
+    "lv": "",
+    "lvt": "",
+    "other": "\x20-\x7e\xa0-\xac\xae-\xff",
+    "spacingmark": "",
+    "t": "",
+    "v": ""
 }
