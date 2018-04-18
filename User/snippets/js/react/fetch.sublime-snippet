@@ -1,8 +1,11 @@
 <snippet>
   <content><![CDATA[
+const token = document.getElementsByName('csrf-token')[0].content
+
 fetch('/graphql', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+  credentials: 'same-origin',
+  headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': token },
   body: JSON.stringify({
     $1
   })

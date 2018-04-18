@@ -33,7 +33,7 @@
 	"caret_style": "blink",
 	"close_windows_when_empty": true,
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Eiffel (SL).tmTheme",
 	"copy_with_empty_selection": false,
 	"detect_slow_plugins": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -66,7 +66,7 @@
 		"nex-app-parse/logs",
 		".idea"
 	],
-	"font_face": "Source Code Pro for Powerline",
+	"font_face": "Monaco",
 	"font_options":
 	[
 		""
@@ -83,8 +83,8 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"line_padding_bottom": 1,
-	"line_padding_top": 1,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"margin": 2,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
@@ -97,7 +97,7 @@
 	"show_errors_inline": false,
 	"show_line_endings": true,
 	"tab_size": 2,
-	"theme": "Boxy Ocean.sublime-theme",
+	"theme": "Boxy Yesterday.sublime-theme",
 	"theme_accent_cyan": true,
 	"theme_autocomplete_item_selected_colored": true,
 	"theme_icons_atomized": false,

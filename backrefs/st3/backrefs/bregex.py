@@ -10,8 +10,6 @@ Add the ability to use the following backrefs with re:
  - `\u0000` and `\U00000000`                                    - Unicode characters (replace)
  - `\R`                                                         - Generic line breaks (search)
  - `\e`                                                         - Escape character (search)
- - `\<`                                                         - Starting word boundary (search)
- - `\>`                                                         - Ending word boundary (search)
 
 Licensed under MIT
 Copyright (c) 2015 - 2018 Isaac Muse <isaacmuse@gmail.com>
@@ -82,14 +80,14 @@ _REGEX_TYPE = type(_regex.compile('', 0))
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_search_compile(pattern, re_verbose, re_version):
+def _cached_search_compile(pattern, re_verbose, re_version, pattern_type):
     """Cached search compile."""
 
     return _bregex_parse._SearchParser(pattern, re_verbose, re_version).parse()
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_replace_compile(pattern, repl, flags):
+def _cached_replace_compile(pattern, repl, flags, pattern_type):
     """Cached replace compile."""
 
     return _bregex_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
@@ -142,7 +140,7 @@ def _apply_search_backrefs(pattern, flags=0):
         else:
             re_version = 0
         if not (flags & DEBUG):
-            pattern = _cached_search_compile(pattern, re_verbose, re_version)
+            pattern = _cached_search_compile(pattern, re_verbose, re_version, type(pattern))
         else:  # pragma: no cover
             pattern = _bregex_parse._SearchParser(pattern, re_verbose, re_version).parse()
     elif isinstance(pattern, Bregex):
@@ -170,7 +168,7 @@ def _assert_expandable(repl, use_format=False):
         raise TypeError("Expected string, buffer, or compiled replace!")
 
 
-def compile(pattern, flags=0, auto_compile=None):
+def compile(pattern, flags=0, auto_compile=None, **kwargs):
     """Compile both the search or search and replace into one object."""
 
     if isinstance(pattern, Bregex):
@@ -183,7 +181,7 @@ def compile(pattern, flags=0, auto_compile=None):
         if auto_compile is None:
             auto_compile = True
 
-        return Bregex(compile_search(pattern, flags), auto_compile)
+        return Bregex(compile_search(pattern, flags, **kwargs), auto_compile)
 
 
 def compile_search(pattern, flags=0, **kwargs):
@@ -199,7 +197,7 @@ def compile_replace(pattern, repl, flags=0):
     if pattern is not None and isinstance(pattern, _REGEX_TYPE):
         if isinstance(repl, (_util.string_type, _util.binary_type)):
             if not (pattern.flags & DEBUG):
-                call = _cached_replace_compile(pattern, repl, flags)
+                call = _cached_replace_compile(pattern, repl, flags, type(repl))
             else:  # pragma: no cover
                 call = _bregex_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
         elif isinstance(repl, ReplaceTemplate):
@@ -229,14 +227,14 @@ class Bregex(_util.Immutable):
         super(Bregex, self).__init__(
             _pattern=pattern,
             auto_compile=auto_compile,
-            _hash=hash((type(self), pattern, auto_compile))
+            _hash=hash((type(self), type(pattern), pattern, auto_compile))
         )
 
     @property
     def pattern(self):
         """Return pattern."""
 
-        return self._pattern
+        return self._pattern.pattern
 
     @property
     def flags(self):
@@ -312,62 +310,62 @@ class Bregex(_util.Immutable):
     def compile(self, repl, flags=0):
         """Compile replace."""
 
-        return compile_replace(self.pattern, repl, flags)
+        return compile_replace(self._pattern, repl, flags)
 
-    def search(self, string, pos=None, endpos=None, concurrent=None, partial=False,):
+    def search(self, string, pos=None, endpos=None, concurrent=None, partial=False):
         """Apply `search`."""
 
-        return self.pattern.search(string, pos, endpos, concurrent, partial)
+        return self._pattern.search(string, pos, endpos, concurrent, partial)
 
-    def match(self, string, pos=None, endpos=None, concurrent=None, partial=False,):
+    def match(self, string, pos=None, endpos=None, concurrent=None, partial=False):
         """Apply `match`."""
 
-        return self.pattern.match(string, pos, endpos, concurrent, partial)
+        return self._pattern.match(string, pos, endpos, concurrent, partial)
 
     def fullmatch(self, string, pos=None, endpos=None, concurrent=None, partial=False):
         """Apply `fullmatch`."""
 
-        return self.pattern.fullmatch(string, pos, endpos, concurrent, partial)
+        return self._pattern.fullmatch(string, pos, endpos, concurrent, partial)
 
     def split(self, string, maxsplit=0, concurrent=None):
         """Apply `split`."""
 
-        return self.pattern.split(string, maxsplit, concurrent)
+        return self._pattern.split(string, maxsplit, concurrent)
 
     def splititer(self, string, maxsplit=0, concurrent=None):
         """Apply `splititer`."""
 
-        return self.pattern.splititer(string, maxsplit, concurrent)
+        return self._pattern.splititer(string, maxsplit, concurrent)
 
     def findall(self, string, pos=None, endpos=None, overlapped=False, concurrent=None):
         """Apply `findall`."""
 
-        return self.pattern.findall(string, pos, endpos, overlapped, concurrent)
+        return self._pattern.findall(string, pos, endpos, overlapped, concurrent)
 
     def finditer(self, string, pos=None, endpos=None, overlapped=False, concurrent=None, partial=False):
         """Apply `finditer`."""
 
-        return self.pattern.finditer(string, pos, endpos, overlapped, concurrent, partial)
+        return self._pattern.finditer(string, pos, endpos, overlapped, concurrent, partial)
 
     def sub(self, repl, string, count=0, pos=None, endpos=None, concurrent=None):
         """Apply `sub`."""
 
-        return self.pattern.sub(self._auto_compile(repl), string, count, pos, endpos, concurrent)
+        return self._pattern.sub(self._auto_compile(repl), string, count, pos, endpos, concurrent)
 
     def subf(self, repl, string, count=0, pos=None, endpos=None, concurrent=None):  # noqa A002
         """Apply `sub` with format style replace."""
 
-        return self.pattern.subf(self._auto_compile(repl, True), string, count, pos, endpos, concurrent)
+        return self._pattern.subf(self._auto_compile(repl, True), string, count, pos, endpos, concurrent)
 
     def subn(self, repl, string, count=0, pos=None, endpos=None, concurrent=None):
         """Apply `subn` with format style replace."""
 
-        return self.pattern.subn(self._auto_compile(repl), string, count, pos, endpos, concurrent)
+        return self._pattern.subn(self._auto_compile(repl), string, count, pos, endpos, concurrent)
 
     def subfn(self, repl, string, count=0, pos=None, endpos=None, concurrent=None):  # noqa A002
         """Apply `subn` after applying backrefs."""
 
-        return self.pattern.subfn(self._auto_compile(repl, True), string, count, pos, endpos, concurrent)
+        return self._pattern.subfn(self._auto_compile(repl, True), string, count, pos, endpos, concurrent)
 
 
 def purge():

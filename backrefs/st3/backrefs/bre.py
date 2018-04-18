@@ -17,8 +17,10 @@ Add the ability to use the following backrefs with re:
  - `\N{Black Club Suit}`                                         - Unicode character by name (search & replace)
  - `\u0000` and `\U00000000`                                     - Unicode characters (replace)
  - `\e`                                                          - Escape character (search)
- - `\<`                                                          - Starting word boundary (search)
- - `\>`                                                          - Ending word boundary (search)
+ - `\m`                                                          - Starting word boundary (search)
+ - `\M`                                                          - Ending word boundary (search)
+ - `\R`                                                          - Generic line breaks (search)
+ - `\X`                                                          - Simplified grapheme clusters (search)
 
 Licensed under MIT
 Copyright (c) 2011 - 2018 Isaac Muse <isaacmuse@gmail.com>
@@ -67,14 +69,14 @@ _RE_TYPE = type(_re.compile('', 0))
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_search_compile(pattern, re_verbose, re_version):
+def _cached_search_compile(pattern, re_verbose, re_version, pattern_type):
     """Cached search compile."""
 
     return _bre_parse._SearchParser(pattern, re_verbose, re_version).parse()
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_replace_compile(pattern, repl, flags):
+def _cached_replace_compile(pattern, repl, flags, pattern_type):
     """Cached replace compile."""
 
     return _bre_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
@@ -126,7 +128,7 @@ def _apply_search_backrefs(pattern, flags=0):
         elif bool(UNICODE & flags):
             re_unicode = True
         if not (flags & DEBUG):
-            pattern = _cached_search_compile(pattern, re_verbose, re_unicode)
+            pattern = _cached_search_compile(pattern, re_verbose, re_unicode, type(pattern))
         else:  # pragma: no cover
             pattern = _bre_parse._SearchParser(pattern, re_verbose, re_unicode).parse()
     elif isinstance(pattern, Bre):
@@ -168,14 +170,14 @@ class Bre(_util.Immutable):
         super(Bre, self).__init__(
             _pattern=pattern,
             auto_compile=auto_compile,
-            _hash=hash((type(self), pattern, auto_compile))
+            _hash=hash((type(self), type(pattern), pattern, auto_compile))
         )
 
     @property
     def pattern(self):
         """Return pattern."""
 
-        return self._pattern
+        return self._pattern.pattern
 
     @property
     def flags(self):
@@ -251,58 +253,58 @@ class Bre(_util.Immutable):
     def compile(self, repl, flags=0):
         """Compile replace."""
 
-        return compile_replace(self.pattern, repl, flags)
+        return compile_replace(self._pattern, repl, flags)
 
     def search(self, string, pos=0, endpos=_sys.maxsize):
         """Apply `search`."""
 
-        return self.pattern.search(string, pos, endpos)
+        return self._pattern.search(string, pos, endpos)
 
     def match(self, string, pos=0, endpos=_sys.maxsize):
         """Apply `match`."""
 
-        return self.pattern.match(string, pos, endpos)
+        return self._pattern.match(string, pos, endpos)
 
     if _util.PY34:
         def fullmatch(self, string, pos=0, endpos=_sys.maxsize):
             """Apply `fullmatch`."""
 
-            return self.pattern.fullmatch(string, pos, endpos)
+            return self._pattern.fullmatch(string, pos, endpos)
 
     def split(self, string, maxsplit=0):
         """Apply `split`."""
 
-        return self.pattern.split(string, maxsplit)
+        return self._pattern.split(string, maxsplit)
 
     def findall(self, string, pos=0, endpos=_sys.maxsize):
         """Apply `findall`."""
 
-        return self.pattern.findall(string, pos, endpos)
+        return self._pattern.findall(string, pos, endpos)
 
     def finditer(self, string, pos=0, endpos=_sys.maxsize):
         """Apply `finditer`."""
 
-        return self.pattern.finditer(string, pos, endpos)
+        return self._pattern.finditer(string, pos, endpos)
 
     def sub(self, repl, string, count=0):
         """Apply `sub`."""
 
-        return self.pattern.sub(self._auto_compile(repl), string, count)
+        return self._pattern.sub(self._auto_compile(repl), string, count)
 
     def subf(self, repl, string, count=0):  # noqa A002
         """Apply `sub` with format style replace."""
 
-        return self.pattern.sub(self._auto_compile(repl, True), string, count)
+        return self._pattern.sub(self._auto_compile(repl, True), string, count)
 
     def subn(self, repl, string, count=0):
         """Apply `subn` with format style replace."""
 
-        return self.pattern.subn(self._auto_compile(repl), string, count)
+        return self._pattern.subn(self._auto_compile(repl), string, count)
 
     def subfn(self, repl, string, count=0):  # noqa A002
         """Apply `subn` after applying backrefs."""
 
-        return self.pattern.subn(self._auto_compile(repl, True), string, count)
+        return self._pattern.subn(self._auto_compile(repl, True), string, count)
 
 
 def compile(pattern, flags=0, auto_compile=None):
@@ -334,7 +336,7 @@ def compile_replace(pattern, repl, flags=0):
     if pattern is not None and isinstance(pattern, _RE_TYPE):
         if isinstance(repl, (_util.string_type, _util.binary_type)):
             if not (pattern.flags & DEBUG):
-                call = _cached_replace_compile(pattern, repl, flags)
+                call = _cached_replace_compile(pattern, repl, flags, type(repl))
             else:  # pragma: no cover
                 call = _bre_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
         elif isinstance(repl, ReplaceTemplate):

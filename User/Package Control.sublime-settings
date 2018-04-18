@@ -7,14 +7,17 @@
 	[
 		"A File Icon",
 		"AdvancedNewFile",
+		"Agila Theme",
 		"All Autocomplete",
 		"ApplySyntax",
+		"ayu",
 		"Babel",
 		"Babel Snippets",
 		"BetterFindBuffer",
 		"Boxy Theme",
 		"BracketHighlighter",
 		"Clipboard Manager",
+		"ColorSchemeEditor",
 		"CycleGroup",
 		"EJS",
 		"EnhancedReadline",
@@ -50,6 +53,7 @@
 		"SublimeLinter-rubocop",
 		"SublimeLinter-xmllint",
 		"TestRSpec",
+		"Theme - Hero",
 		"xml2json"
 	]
 }
