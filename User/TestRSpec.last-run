@@ -6,7 +6,7 @@
 		{
 		},
 		"file_regex": "([^ ]*\\.rb):?(\\d*)",
-		"shell_cmd": "(export PATH=$HOME/.rbenv/shims:$PATH; cd /Users/sasha/devmynd/mirs/mirs-backend-yavin && /usr/bin/env ruby -S bundle exec spring rspec spec/graphql/types/pre_enlistment_interview_type_spec.rb)",
+		"shell_cmd": "(export PATH=$HOME/.rbenv/shims:$PATH; cd /Users/sasha/devmynd/mirs/mirs-backend-yavin && ./bin/rspec spec/models/asvab_result_spec.rb:10)",
 		"syntax": "Packages/TestRSpec/themes/TestConsole.tmLanguage",
 		"working_dir": "/Users/sasha/devmynd/mirs/mirs-backend-yavin"
 	}

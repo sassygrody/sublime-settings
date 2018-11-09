@@ -1,0 +1,6 @@
+// These settings override both User and Default settings for the Markdown syntax
+{
+  "color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
+  "line_numbers": false,
+  "font_face": "Cousine"
+}

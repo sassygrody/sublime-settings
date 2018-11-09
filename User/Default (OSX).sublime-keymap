@@ -118,4 +118,6 @@
     ]
   },
   { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+  { "keys": ["ctrl+r"], "command": "test_current_line" },
+  { "keys": ["ctrl+t"], "command": "test_current_file" },
 ]

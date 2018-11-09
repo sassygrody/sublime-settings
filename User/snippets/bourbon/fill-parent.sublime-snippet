@@ -1,7 +1,0 @@
-<snippet>
-  <content><![CDATA[
-@include fill-parent;
-]]></content>
-  <tabTrigger>fp</tabTrigger>
-  <scope>source.scss</scope>
-</snippet>

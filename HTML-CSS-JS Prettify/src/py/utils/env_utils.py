@@ -5,6 +5,7 @@
 
 import subprocess
 from os import environ, devnull
+from os.path import expanduser
 
 from .constants import PLATFORM
 from .window_utils import get_pref
@@ -36,7 +37,7 @@ class NodeSyntaxError(RuntimeError):
 def get_node_path():
     """Gets the node.js path specified in this plugin's settings file"""
     node = get_pref("node_path").get(PLATFORM)
-    return node
+    return expanduser(node)
 
 
 def run_command(args):
@@ -55,7 +56,10 @@ def run_command(args):
 
     stdout, stderr = subprocess.Popen(args, **popen_args).communicate()
     if stderr:
-        if b"SyntaxError" in stderr:
+        if b"ExperimentalWarning" in stderr:
+            # Don't treat node experimental warnings as actual errors.
+            return stdout
+        elif b"SyntaxError" in stderr:
             raise NodeSyntaxError(
                 stdout.decode('utf-8'), stderr.decode('utf-8'))
         else:

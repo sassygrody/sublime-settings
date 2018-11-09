@@ -1,0 +1,4 @@
+{
+    // scan document to format tables when saving
+    "autoformat_on_save": true
+}

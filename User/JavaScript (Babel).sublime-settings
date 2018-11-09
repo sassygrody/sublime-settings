@@ -2,5 +2,6 @@
 	"extensions":
 	[
 		"js"
-	]
+	],
+  "color_scheme": "Packages/Agila Theme/Agila Light Solarized.tmTheme"
 }
